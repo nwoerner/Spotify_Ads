@@ -1,4 +1,3 @@
-#%%
 from pycaw.pycaw import AudioUtilities, ISimpleAudioVolume
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
@@ -115,34 +114,3 @@ class Spotify_App(object):
 
 if __name__ == "__main__":
     Spotify_App().No_Ad_Volume()
-
-#%%
-# import base64
-# import json
-# import requests
-
-# Authorization 
-# url = "https://accounts.spotify.com/api/token"
-# headers = {}
-# data = {}
-
-# Encode as Base64
-# message = f"{Client_ID}:{Client_Secret}"
-# messageBytes = message.encode('ascii')
-# base64Bytes = base64.b64encode(messageBytes)
-# base64Message = base64Bytes.decode('ascii')
-
-
-# headers['Authorization'] = f"Basic {base64Message}"
-# data['grant_type'] = "client_credentials"
-
-# r = requests.post(url, headers=headers, data=data)
-
-# token = r.json()['access_token']
-
-# play = "https://api.spotify.com/v1/me/playlists"
-# head = {'Authorization': f'Bearer {token}'}
-# res = requests.get(url=play, headers=head)
-# data = json.dumps(res.json(), indent=2)
-# obj = json.loads(data)
-# print(obj)
